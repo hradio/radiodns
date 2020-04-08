@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="eu.hradio.core.radiodns">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Needed for DNS retrieval on Android SDK >= 26 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Needed for unsecured HTTP retrieval of EPG SPI and SI files on Android SDK 28 and later.
+         Will be ignored on Android SDK < 23
+    -->
+    <application
+        android:usesCleartextTraffic="true"
+        />
+
+</manifest>
